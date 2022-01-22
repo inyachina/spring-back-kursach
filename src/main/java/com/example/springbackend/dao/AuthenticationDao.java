@@ -1,10 +1,10 @@
-package com.example.springbackend.requests;
+package com.example.springbackend.dao;
 
 import lombok.Data;
 import lombok.NonNull;
 
 @Data
-public class AuthenticationRequest {
+public class AuthenticationDao {
     @NonNull
     private String login;
     @NonNull

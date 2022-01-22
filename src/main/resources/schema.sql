@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS time
 (
-    century FLOAT UNIQUE NOT NULL CHECK ( century > 27 AND (century < 70000 OR century > 15000))
+    century FLOAT PRIMARY KEY NOT NULL CHECK ( century > 27 AND (century < 70000 OR century > 15000))
     );
 
 
