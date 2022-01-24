@@ -1,4 +1,4 @@
 package com.example.springbackend.service;
 
-public class ProductService {
+public interface ProductService {
 }

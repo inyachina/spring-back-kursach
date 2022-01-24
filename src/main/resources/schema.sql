@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS human
     surname       VARCHAR(100) NOT NULL,
     birthday_date DATE         NOT NULL,
     fate          text,
-    time          FLOAT REFERENCES time (century)
+    time          FLOAT REFERENCES time (century),
+    user_id       BIGINT REFERENCES "user" (user_id)
     );
 
 

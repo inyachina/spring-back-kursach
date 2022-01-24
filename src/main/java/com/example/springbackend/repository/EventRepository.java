@@ -14,10 +14,6 @@ public interface EventRepository extends JpaRepository<Event, Integer> {
 
     List<Event> findAll();
 
-    List<Event> findAll(Sort sort);
-
-    List<Event> findAllById(Iterable<Integer> ids);
-
     void deleteById(Integer id);
 
     void delete(Event entity);

@@ -31,7 +31,7 @@ public class AuthController {
     public ResponseEntity<Response<Object>> authorize(@RequestBody @NonNull AuthorizationDao req) {
         try {
             this.userService.findByLogin(req.getLogin());
-            this.userService.saveUser(new User(req.getLogin(), req.getPassword(), req.getPhone(), req.getEmail()));
+            this.userService.saveUser(new User(req.getLogin(), req.getPassword(), req.getPhone(), req.getEmail(), req.isEmployee()));
             return Response.success();
         } catch (Exception e) {
             return Response.failure(

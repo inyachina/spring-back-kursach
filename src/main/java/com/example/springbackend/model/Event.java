@@ -5,7 +5,6 @@ import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.time.LocalDate;
 
 @Data
 @Entity
@@ -14,7 +13,6 @@ public class Event {
 
     @Id
     @GeneratedValue(generator = "increment")
-    @Column(name = "event_id", nullable = false)
     int id;
 
     String name;
@@ -36,4 +34,6 @@ public class Event {
         this.startTime = startTime;
         this.endTime = endTime;
     }
+
+    public Event(){}
 }

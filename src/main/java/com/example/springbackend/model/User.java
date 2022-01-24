@@ -2,7 +2,6 @@ package com.example.springbackend.model;
 
 import lombok.Data;
 import lombok.NonNull;
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 
@@ -25,18 +24,18 @@ public class User {
 
     private String email;
 
-//    @Nullable
-//    private int humanId;
+    private boolean isEmployee;
 
     public User() {
 
     }
 
-    public User(@NonNull String login, @NonNull String password, @NonNull String phone, @NonNull String email) {
+    public User(@NonNull String login, @NonNull String password, @NonNull String phone, @NonNull String email,@NonNull boolean isEmployee) {
         this.login = login;
         this.password = password;
         this.phone = phone;
         this.email = email;
+        this.isEmployee = isEmployee;
     }
 
 }

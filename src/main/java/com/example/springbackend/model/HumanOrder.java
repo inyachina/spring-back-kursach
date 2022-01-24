@@ -8,22 +8,21 @@ import java.sql.Date;
 @Entity
 @Data
 @Table
-public class Product {
-
+public class HumanOrder {
     @Id
     @GeneratedValue(generator = "increment")
     int id;
 
-    String name;
-
-    String description;
+    String status;
 
     Date createdDate;
 
-    int owner;
+    Date modifiedDate;
 
-    Date timeCurrent;
+    int createdBy;
 
-    public Product() {
-    }
+    int modifiedBy;
+
+    @OneToOne
+    Human human;
 }
